@@ -74,3 +74,13 @@ The use of a schemaless changeset is implemented in index.ex:
 | lib/dbless_form_web/live/tseq_live/index.html.heex | Template with invocation of the LiveComponent |
 | lib/dbless_form_web/live/tseq_live/form_component.ex | The dynamic form |
 | lib/dbless_form/executions/tseq.ex  | TBD: dynamic validations (ranges, etc.)  |
+
+
+## Run the project
+
+```
+$ mix setup
+$ iex -S mix phx.server
+```
+
+Then click the link on the home page and the "Dynamic Form" button on the next page.

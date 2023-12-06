@@ -8,7 +8,6 @@
 import Config
 
 config :dbless_form,
-  ecto_repos: [DblessForm.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
@@ -21,15 +20,6 @@ config :dbless_form, DblessFormWeb.Endpoint,
   ],
   pubsub_server: DblessForm.PubSub,
   live_view: [signing_salt: "Sxnt4Pj/"]
-
-# Configures the mailer
-#
-# By default it uses the "Local" adapter which stores the emails
-# locally. You can see the emails in your browser, at "/dev/mailbox".
-#
-# For production it's recommended to configure a different adapter
-# at the `config/runtime.exs`.
-config :dbless_form, DblessForm.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,

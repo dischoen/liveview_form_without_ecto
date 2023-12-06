@@ -1,15 +1,5 @@
 import Config
 
-# Configure your database
-config :dbless_form, DblessForm.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "dbless_form_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -77,6 +67,3 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Include HEEx debug annotations as HTML comments in rendered markup
 config :phoenix_live_view, :debug_heex_annotations, true
-
-# Disable swoosh api client as it is only required for production adapters.
-config :swoosh, :api_client, false

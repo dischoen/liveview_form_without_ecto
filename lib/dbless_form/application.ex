@@ -9,7 +9,6 @@ defmodule DblessForm.Application do
   def start(_type, _args) do
     children = [
       DblessFormWeb.Telemetry,
-      DblessForm.Repo,
       {DNSCluster, query: Application.get_env(:dbless_form, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: DblessForm.PubSub},
       # Start the Finch HTTP client for sending emails

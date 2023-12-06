@@ -1,15 +1,11 @@
 <.header>
-  Listing Tseqs
+  Try a dynamic form
   <:actions>
     <.link patch={~p"/tseqs/form"}>
-      <.button>New Tseq</.button>
+      <.button>Dynamic form</.button>
     </.link>
   </:actions>
 </.header>
-
-<div>
-  <h1> form data! </h1>
-</div>
 
 <.modal :if={@live_action in [:form]}
         id="tseq-modal"
