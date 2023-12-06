@@ -1,0 +1,26 @@
+<.header>
+  Listing Tseqs
+  <:actions>
+    <.link patch={~p"/tseqs/form"}>
+      <.button>New Tseq</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<div>
+  <h1> form data! </h1>
+</div>
+
+<.modal :if={@live_action in [:form]}
+        id="tseq-modal"
+        show
+        on_cancel={JS.patch(~p"/tseqs")}>
+  <.live_component
+    module = {DblessFormWeb.TseqLive.FormComponent}
+    id     = {@tseq.id || :new}
+    title  = {@page_title}
+    action = {@live_action}
+    tseq   = {@tseq}
+    patch  = {~p"/tseqs"}
+  />
+</.modal>
