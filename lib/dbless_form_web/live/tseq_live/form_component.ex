@@ -43,7 +43,7 @@ defmodule DblessFormWeb.TseqLive.FormComponent do
 
   @impl true
   def update(%{tseq: tseq} = assigns, socket) do
-    IO.inspect label: :update_in_form
+    IO.inspect {tseq, assigns}, label: :update_in_form
     changeset = Executions.change_tseq(tseq)
     {:ok,
      socket

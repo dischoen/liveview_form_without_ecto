@@ -16,7 +16,7 @@ defmodule DblessFormWeb.TseqLive.Index do
                   "iterations" => %{:value => 100,     :type => :integer},
                   "is_good"    => %{:value => :false,  :type => :boolean},
                   "weather"    => %{:value => "windy", :type => :string}}
-    
+     
     params = Map.new(Enum.map(form_data, fn({k,v}) -> {String.to_atom(k), v.value} end))
     types = Map.new(Enum.map(form_data, fn({k,v}) -> {String.to_atom(k), v.type} end))
     changeset =
